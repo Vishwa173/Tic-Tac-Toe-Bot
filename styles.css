@@ -1,0 +1,123 @@
+#x{
+    text-align: center;
+    padding-bottom: 5px;
+    font-size: 70px;
+    font-family: fantasy;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "X";
+    font-size: 18px;
+    font-family: sans-serif;
+    color: white;
+    text-align: center;
+    line-height: 26px;
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: black;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #E2E0C8;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+    content: "O";
+}
+
+.restart{
+    background-color: #ccc;
+    border-radius: 30%;
+    width: 100px;
+    height: 50px;
+    font-family: fantasy;
+    font-size: 25px;
+}
+
+.container0{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55vh;
+}
+.grid{
+    display: grid;
+    width: 450px;
+    height: 450px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.grid-item{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+#a, #b, #c {
+    border-bottom: 4px solid #818C78;
+    border-radius: 5%;
+}
+
+#d, #e, #f {
+    border-top: 4px solid #818C78;
+    border-bottom: 4px solid #818C78;
+    border-radius: 5%;
+}
+
+#g, #h, #i {
+    border-top: 4px solid #818C78;
+    border-radius: 5%;
+}
+
+#a, #d, #g {
+    border-right: 4px solid #818C78;
+    border-radius: 5%;
+}
+
+#b, #e, #h {
+    border-left: 4px solid #818C78;
+    border-right: 4px solid #818C78;
+    border-radius: 5%;
+}
+
+#c, #f, #i {
+    border-left: 4px solid #818C78;
+    border-radius: 5%;
+}
